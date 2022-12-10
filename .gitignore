@@ -1,0 +1,15 @@
+# Compiled python
+*.pyc
+.pytest_cache
+*.egg-info
+build
+
+# Visual Studio
+.vs
+*.pyproj
+*.pyproj.user
+*.sln
+
+# Visual Studio Code
+.vscode
+*.code-workspace
