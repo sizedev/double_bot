@@ -1,2 +1,7 @@
+from double_bot.core import run_bot
+
 def main():
-    print("Beep Boop")
+    run_bot()
+
+if __name__ == '__main__':
+    main()

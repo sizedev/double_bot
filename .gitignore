@@ -13,3 +13,6 @@ build
 # Visual Studio Code
 .vscode
 *.code-workspace
+
+# Environment Variables
+.env
