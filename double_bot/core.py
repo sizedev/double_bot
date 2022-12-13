@@ -41,6 +41,7 @@ class DoubleBot(commands.Bot):
         DOUBLE_SCORE_GUILD=discord.Object(id=1050992474283319366)
         await load_extensions(self, "double_bot.cogs")
         # To sync global commands, just drop the guild parameter. But global commands take several hours to sync new commands, so this way is best in testing.
+        self.tree.copy_global_to(guild=DOUBLE_SCORE_GUILD)
         await self.tree.sync(guild=DOUBLE_SCORE_GUILD)
 
     async def on_ready(self):
