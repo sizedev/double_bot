@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "a6b604b1918f4539292e4ed2345c35fa6053fe1589db17828933ddd5578b0c66"
+            "sha256": "0cbcf4120cb2520ac9ae6a2080246b70944042d39a1253a5c35d9645ebe45676"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -163,10 +163,6 @@
             ],
             "index": "pypi",
             "version": "==2.1.0"
-        },
-        "double-bot": {
-            "editable": true,
-            "path": "."
         },
         "frozenlist": {
             "hashes": [
