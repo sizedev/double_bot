@@ -1,14 +1,40 @@
+import logging
 import os
 
 import discord
 from discord.ext import commands
 
+from digiformatter import logger as digilogger
+
 from double_bot.botutils import load_extensions
 
+# Set up logging
+logger: logging.Logger = None
+discordlogger: logging.Logger = None
+
+def setup_logging():
+    global logger, discordlogger
+    logging.basicConfig(level=logging.INFO)
+    dfhandler = digilogger.DigiFormatterHandler()
+    dfhandlersource = digilogger.DigiFormatterHandler(showsource=True)
+
+    logger = logging.getLogger("double_bot")
+    logger.setLevel(logging.DEBUG)
+    logger.handlers = []
+    logger.propagate = False
+    logger.addHandler(dfhandler)
+
+    discordlogger = logging.getLogger("discord")
+    discordlogger.setLevel(logging.WARN)
+    discordlogger.handlers = []
+    discordlogger.propagate = False
+    discordlogger.addHandler(dfhandlersource)
+
 def run_bot():
-    intents = discord.Intents.default()
-    bot = DoubleBot(command_prefix=[], intents=intents)
-    bot.run(os.environ['BOT_TOKEN'])
+    setup_logging()
+    intents = discord.Intents.all()
+    bot = DoubleBot(command_prefix=["?"], intents=intents)
+    bot.run(os.environ['BOT_TOKEN'], log_handler = None)
 
 class DoubleBot(commands.Bot):
     async def setup_hook(self):

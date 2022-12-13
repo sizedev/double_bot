@@ -6,8 +6,10 @@ name = "pypi"
 [packages]
 "discord.py" = "*"
 double-bot = {editable = true, path = "."}
+digiformatter = "*"
 
 [dev-packages]
+double-bot = {editable = true, path = "."}
 
 [requires]
 python_version = "3.11"

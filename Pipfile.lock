@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "66c58ffefff1b95f8bcc79612810d28c9bb7a0f23903110136450e238e538b50"
+            "sha256": "a6b604b1918f4539292e4ed2345c35fa6053fe1589db17828933ddd5578b0c66"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -141,6 +141,20 @@
             ],
             "markers": "python_full_version >= '3.6.0'",
             "version": "==2.1.1"
+        },
+        "colored": {
+            "hashes": [
+                "sha256:056fac09d9e39b34296e7618897ed1b8c274f98423770c2980d829fd670955ed"
+            ],
+            "version": "==1.4.2"
+        },
+        "digiformatter": {
+            "hashes": [
+                "sha256:6ee5236c7f124db43bd711567dbd5996bc2371c1418cc5ce41525d36ab5de032",
+                "sha256:bc689e2bc41152c177741a0e1c417ff23dbd651d855d121e47fd1dc960a6deba"
+            ],
+            "index": "pypi",
+            "version": "==0.5.7.2"
         },
         "discord.py": {
             "hashes": [
@@ -403,5 +417,10 @@
             "version": "==1.8.2"
         }
     },
-    "develop": {}
+    "develop": {
+        "double-bot": {
+            "editable": true,
+            "path": "."
+        }
+    }
 }
